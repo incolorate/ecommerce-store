@@ -2,6 +2,10 @@ import NavBar from "@/components/NavBar";
 import Swipe from "@/components/Swipe";
 import Image from "next/image";
 import featured from "../components/images/featured.png";
+import Offers from "@/components/Offers";
+import offer1 from "../components/images/gift1.png";
+import offer2 from "../components/images/gift2.png";
+
 export default function Home() {
   return (
     <div>
@@ -20,6 +24,19 @@ export default function Home() {
         </div>
       </div>
       <Swipe />
+      <div className="container-lg flex justify-center flex-wrap gap-6">
+        <Offers
+          title="Looking for a premium computer component for your system? Search no more! Buy products worth $100 or above on our site, and we'll add a complimentary accessory to your purchase."
+          image={offer1}
+        />
+        <Offers
+          title="Are you looking for a high-quality computer part for your system? Look no further! Purchase $300 or more worth of products on our website and we'll include a free accessory with your order."
+          image={offer2}
+        />
+      </div>
+      <div className="bg-stone-950 mt-6 p-6 text-center">
+        <p className="text-sm">@ 2023 PCparts, Inc. All rights reserved.</p>
+      </div>
     </div>
   );
 }
